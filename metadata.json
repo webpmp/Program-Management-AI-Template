@@ -1,0 +1,5 @@
+{
+  "name": "Program Management AI Template",
+  "description": "A streamlined, single-page project management template with an integrated AI agent that answers questions about projects, resources, and deliverables using Gemini.",
+  "requestFramePermissions": []
+}
