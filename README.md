@@ -1,20 +1,54 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+<img src="https://github.com/webpmp/webpmp.github.io/blob/master/hero-pgm-ai-template.png" alt="Program Management AI Template" style="max-width: 90%;">
 
-# Run and deploy your AI Studio app
+# Program Management AI Template
 
-This contains everything you need to run your app locally.
+A streamlined, single-page executive dashboard designed for Program Managers to track multiple projects, resources, and deliverables with an integrated AI agent.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1EiGtJcFSXkSbLkAiUBvN_AUuLv8HrjsT
+## 🚀 Key Features
 
-## Run Locally
+- **AI Program Assistant**: A persistent sidebar agent that answers natural language questions about project statuses, resource allocations, and deliverable links.
+- **Smart Executive Summary**: Generates a high-level summary of selected projects, including an "Overall Program Health" assessment and "Path to Green" recovery plans for at-risk items.
+- **Interactive Program Timeline**: A Gantt-style visualization of project durations and milestones with built-in filtering capabilities.
+- **Dynamic Data Tables**: Spreadsheet-style interfaces for managing Projects (P##), Resources (Role Codes), Milestones (M##), and Deliverables (D##).
+- **Inline Editing**: All data can be updated directly within the UI, with automatic Role Code generation for new resources.
+- **Theming & Configuration**: Fully customizable status lists, role types, icons, and brand colors via the Program Settings page.
 
-**Prerequisites:**  Node.js
+## 🛠 Technical Stack
 
+- **Framework**: React 19 (ESM via esm.sh)
+- **Styling**: Tailwind CSS (Typography plugin)
+- **Icons**: FontAwesome 6
+- **AI Integration**: `@google/genai` (Gemini 3 Flash/Pro)
+- **Markdown Rendering**: `marked`
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 📋 How to Use
+
+### 1. Initial Setup
+The application initializes with data from `constants.ts`. You can modify this file to set your starting program state.
+
+### 2. Updating Projects
+- Add rows to the **Projects** table to define new initiatives.
+- Use the **Status Details** field to provide context; the AI uses this to determine if a "Path to Green" is needed.
+
+### 3. Resource Allocation
+- Assign resources to projects using the multi-select project code dropdown.
+- Role codes (e.g., `UXD01`, `PM02`) are automatically generated based on the selected role to ensure consistency.
+
+### 4. Generating Reports
+- Click **Generate with AI** in the Executive Summary section.
+- Select the specific projects you want to include in the report.
+- If projects are "At Risk", the system will prompt you for a "Path to Green" before finalizing the summary.
+
+### 5. Customization
+- Scroll to the footer and click **Program Settings**.
+- Modify project statuses, add new resource roles, or change the primary theme colors to match your brand.
+
+## 🤖 AI Agent Examples
+You can ask the sidebar agent questions like:
+- "Who is working on [Project P01]?"
+- "What is the status of the High-Fidelity Mocks deliverable?"
+- "Which projects are currently At Risk?"
+- "Give me a list of all deliverables due in December."
+
+## 📄 License
+This template is designed for internal program management and executive reporting.
