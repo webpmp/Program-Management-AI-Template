@@ -45,7 +45,7 @@ The application initializes with data from `constants.ts`. You can modify this f
 
 ## 🤖 AI Agent Examples
 You can ask the sidebar agent questions like:
-- "Who is working on [Project P01]?"
+- "Who is working on the Mobile App Redesign?"
 - "What is the status of the High-Fidelity Mocks deliverable?"
 - "Which projects are currently At Risk?"
 - "Give me a list of all deliverables due in December."
