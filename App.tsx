@@ -699,7 +699,7 @@ const App: React.FC = () => {
     { 
       header: 'Deliverable', 
       accessor: 'name' as const,
-      width: "w-44", // Reduced name width to make space for wider Code/Ref columns
+      width: "w-44", 
       render: (d: Deliverable) => (
         <input 
           className="bg-transparent focus:bg-white border-none rounded px-1 w-full font-medium text-xs"
@@ -711,7 +711,7 @@ const App: React.FC = () => {
     { 
       header: 'Deliverables Code', 
       accessor: 'code' as const,
-      width: "w-52", // Increased width to accommodate 'DELIVERABLES CODE' without truncation
+      width: "w-52", 
       render: (d: Deliverable) => (
         <input 
           className={codeInputStyle}
@@ -724,7 +724,7 @@ const App: React.FC = () => {
     { 
       header: 'Project Code', 
       accessor: 'projectCode' as const,
-      width: "w-44", // Increased width to accommodate 'PROJECT CODE' without truncation
+      width: "w-44", 
       render: (d: Deliverable) => (
         <ProjectSelect 
           projects={data.projects}
@@ -737,7 +737,7 @@ const App: React.FC = () => {
     { 
       header: 'Links', 
       accessor: 'links' as const,
-      width: 'w-[201px]', 
+      width: 'w-72', // Increased width as requested
       render: (d: Deliverable) => (
         <MultiLinkEditor 
           links={d.links || []} 
@@ -748,7 +748,7 @@ const App: React.FC = () => {
     { 
       header: 'Due Date', 
       accessor: 'dueDate' as const,
-      width: "w-28", // Slightly reduced date width to fit overall width
+      width: "w-40", // Increased width as requested
       render: (d: Deliverable) => (
         <DateInput 
           value={d.dueDate}
@@ -759,7 +759,7 @@ const App: React.FC = () => {
     { 
       header: 'Status', 
       accessor: 'status' as const,
-      width: 'w-[214px]', 
+      width: 'w-36', // Reduced width as requested
       render: (d: Deliverable) => (
         <select 
           className={getCommonSelectStyle()}
